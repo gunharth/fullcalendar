@@ -6,7 +6,7 @@
 	<link href='http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.css' rel='stylesheet' />
 <link href='http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js'></script>
 <style>
 
@@ -18,7 +18,7 @@
 	}
 
 	#calendar {
-		max-width: 900px;
+		max-width: 80%;
 		margin: 0 auto;
 	}
 
@@ -35,8 +35,14 @@
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,basicDay'
+				right: 'month,agendaWeek,agendaDay'
 			},
+			defaultView: 'agendaWeek',
+			forceEventDuration: true,
+			defaultTimedEventDuration: '00:45:00',
+			slotDuration: '00:15:00',
+			minTime: '08:00:00',
+			maxTime: '20:00:00',
 			defaultDate: '2016-01-12',
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events
